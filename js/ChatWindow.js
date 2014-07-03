@@ -1,29 +1,42 @@
 var ChatWindow = function(){
+    var roboCount = 0;
+    var messageCount = 0;
+    var roboResponses = ["Hey! How's it going?", "Do you like the chat window?", "Awesome!"];
+
     this.init = function(){
-        var i = 0;
+        roboResponse();
+        //set on click listener for send message button
         $('#buttonSend').click(function() {
-            var message = $('#messageInput').val();
-            if(message =='') return;
-            //set chat window height manually to keep messages appearing at bottom
-            if( i<4)
-                $('.items').height($('.items').height() + 76);
-            else $('.items').height(260);
-            i++;
-            var messageHTML = createMessage();
-            //$('<li class="chatMessage"><p>'+message+'</p></li>').hide().appendTo('ul.items').show();
-            $(messageHTML).hide().appendTo('ul.items').slideDown('fast');
-            $('.items').scrollTop($('.items li').length * 75);
+            var text = $('#messageInput').val();
+            if(text =='') return;
+            var message = new Message(text);
+            displayNewMessage(message);
+            roboResponse();
             $('#messageInput').val('');
         });
     }
 
+    var checkCount = function(){
+        if( messageCount<4)
+            $('.items').height($('.items').height() + 76);
+        else $('.items').height(260);
+        messageCount++;
+    }
 
-    var createMessage = function(){
-        d = new Date();
-        var time = d.toLocaleTimeString();
-        var message = $('#messageInput').val();
-        var messageHTML = '<li class="chatMessage"><p class="chatTime">'+time+'</p></br><p class="chatText">'+message+'</p></li>';
-        return messageHTML;
+    var displayNewMessage = function(message){
+        checkCount();
+        var text = '<p class="chatText">'+message.text+'</p>';
+        var messageHTML = '<li class="chatMessage"><p class="chatTime">'+message.time+'</p></br><img class="thumbnail" src='+message.imgUrl+'><p class="chatText">'+message.text+'</p></li>';
+        $(messageHTML).hide().appendTo('ul.items').show();
+        $('.items').scrollTop($('.items li').length * 76);
+    }
+
+    var roboResponse = function(){
+        setTimeout(function(){
+            var message = new Message(roboResponses[roboCount%3]);
+            displayNewMessage(message);
+            roboCount++;
+        },1400);
     }
 
 }
