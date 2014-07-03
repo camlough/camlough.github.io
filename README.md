@@ -1,6 +1,7 @@
 camlough.github.io
 ==================
 
-To check out my chat window, go to http://camlough.github.io/
+To see my chat window in action, go to http://camlough.github.io/
 
-An automated robot will conversate with you in the chat window breifly!
+An automated robot will breifly conversate with you!
+
