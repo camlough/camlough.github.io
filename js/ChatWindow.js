@@ -14,6 +14,12 @@ var ChatWindow = function(){
             roboResponse();
             $('#messageInput').val('');
         });
+        //enter key to click 'send' button
+        $("#messageInput").keyup(function(event){
+            if(event.keyCode == 13){
+                $("#buttonSend").click();
+            }
+        });
     }
 
     var checkCount = function(){
