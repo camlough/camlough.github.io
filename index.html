@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Monitise Chat Window<!doctype html>
+        <html lang="en-US">
+        <head>
+            <meta charset="UTF-8">
+            <title></title>
+        </head>
+        <body>
+        
+        </body>
+        </html></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/Message.js"></script>
+    <script src="js/ChatWindow.js"></script>
+</head>
+
+<body>
+
+
+<div id="chatWindow">
+    <div id="windowHeader">
+        <img src="img/monitise-logo-cropped.jpg">
+    </div>
+    <div id="windowBody">
+        <ul class="items">
+        </ul>
+    </div>
+    <div id="windowFooter">
+        <input id="messageInput" type="text">
+        <div id="buttonSend">send</div>
+    </div>
+</div>
+
+
+
+
+<!--<div id="monitiseLogo">-->
+    <!--<img id="logoImage" src="img/monitise-logo.jpg">-->
+<!--</div>-->
+<script>
+   $(document).ready(function(){
+        var monitiseWindow = new ChatWindow;
+        monitiseWindow.init();
+   })
+</script>
+
+</body>
