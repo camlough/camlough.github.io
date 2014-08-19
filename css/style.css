@@ -3,6 +3,7 @@ body{
     font:14px/1.231 arial,helvetica,clean,sans-serif;
     font-style: normal;
     letter-spacing:1px;
+    background-image: url('../img/sf-pic.jpg');
 }
 p{
     margin:0px;
@@ -20,12 +21,13 @@ li{
     position:relative;
     margin: auto;
     border:1px solid #A8A8A8;
-    background: #FFF;
+    /*background: #FFF;*/
     -moz-box-shadow: 0px 3px 10px #888;
     -webkit-box-shadow: 0px 3px 10px #888;
     box-shadow: 0px 3px 10px #888;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-top:50px;
 }
 
 #windowBody{
@@ -51,9 +53,12 @@ li.chatMessage{
     font-size:16px;
 }
 li.chatMessage:nth-child(odd) {
-    background: #F1F1F1;
+    /*background: #F1F1F1;*/
+    background: rgba(255,255,255,.8);
 }
-
+li.chatMessage:nth-child(even) {
+background: rgba(200, 200, 200, 0.8);
+}
 .chatText{
     margin-left: 10px;
     display: inline;
@@ -69,8 +74,10 @@ li.chatMessage:nth-child(odd) {
 
 #windowHeader{
     height:48px;
-    background:#222121;
+    background:rgba(0,0,0,.5);
 }
+
+
 
 #windowFooter{
     position:absolute;
@@ -85,7 +92,7 @@ li.chatMessage:nth-child(odd) {
     height: 24px;
     float: right;
     margin: 5px;
-    background: #FFB900;
+    background:rgba(255, 185, 0, .8);
     color: #FFF;
     text-align: center;
     padding-top: 6px;
@@ -103,9 +110,24 @@ li.chatMessage:nth-child(odd) {
     border-top: none;
     border-left: none;
     border-bottom-left-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
 }
 .thumbnail{
     height: 40px;
     margin-top: -17px;
     margin-left:10px;
+}
+
+#otherExample{
+    width: 200px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    border-radius: 11px;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin:0 auto;
+    margin-top:100px;
+    cursor:pointer;
 }

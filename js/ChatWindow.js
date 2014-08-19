@@ -1,7 +1,7 @@
 var ChatWindow = function(){
     var roboCount = 0;
     var messageCount = 0;
-    var roboResponses = ["Hey! How's it going?", "Do you like the chat window?", "Awesome!"];
+    var roboResponses = ["Hey! How's it going?", "This is a simulated chat window, how do you like it?", "Awesome!"];
 
     this.init = function(){
         roboResponse();
@@ -14,6 +14,10 @@ var ChatWindow = function(){
             roboResponse();
             $('#messageInput').val('');
         });
+
+        $('#otherExample').click(function(){
+           document.location.href = "ebay-pricer.html";
+        })
         //enter key to click 'send' button
         $("#messageInput").keyup(function(event){
             if(event.keyCode == 13){
