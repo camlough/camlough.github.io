@@ -1,37 +1,327 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Cameron Loughman</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/Message.js"></script>
-    <script src="js/ChatWindow.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hello World in Backbone.js</title>
+    <link rel="stylesheet" type="text/css" href="styles/play-bar.css">
+    <style type="text/css">
+
+        html{
+
+        }
+        body{
+            padding:0;
+            margin:0;
+        }
+
+        .player-wrapper{
+            position:fixed;
+            top:0;
+            left:50%;
+        }
+        #player{
+            position: relative;
+            left:-50%;
+        }
+
+        .image-map area{
+            display:block;
+            boder:3px solid red;
+        }
+
+        .poster{
+            height:100%;
+            width:100%;
+        }
+        .poster img{
+            width:100%;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="js/imageMapResizer.min.js"></script>
+
 </head>
-
 <body>
+<!-- ========= -->
+<!-- Your HTML -->
+<!-- ========= -->
+<div class="poster">
+    <!--<img src="coachella_poster.jpg">-->
+
+    <img src="coachella_poster.jpg" width="1800" height="2400" border="0" usemap="#map" />
+
+    <map name="map" class="image-map">
+        <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+        <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+        <!-- #$-:Please do not edit lines starting with "#$" -->
+        <!-- #$VERSION:2.3 -->
+        <!-- #$AUTHOR:Cameron Loughman  -->
+        <area shape="rect" coords="97,420,777,519" alt="Lcd Soundsystem"  nohref="nohref" />
+        <area shape="rect" coords="97,519,407,580" alt="Ellie Goulding"  nohref="nohref" />
+        <area shape="rect" coords="789,513,939,569" alt="Jack U"  nohref="nohref" />
+        <area shape="rect" coords="428,520,765,578" alt="Sufjan Stevens"  nohref="nohref" />
+        <area shape="rect" coords="960,514,1067,572" alt="M83"  nohref="nohref" />
+        <area shape="rect" coords="1091,517,1367,573" alt="Underworld"  nohref="nohref" />
+        <area shape="rect" coords="1380,517,1530,572" alt="The Kills"  nohref="nohref" />
+        <area shape="rect" coords="1549,517,1670,573" alt="Foals"  nohref="nohref" />
+        <area shape="rect" coords="1575,584,1700,625" alt="Savages"  nohref="nohref" />
+        <area shape="rect" coords="1395,584,1561,625" alt="St. Germain"  nohref="nohref" />
+        <area shape="rect" coords="1215,583,1382,626" alt="Lord Huron"  nohref="nohref" />
+        <area shape="rect" coords="1054,583,1202,628" alt="2mandjs"  nohref="nohref" />
+        <area shape="rect" coords="930,582,1042,624" alt="Voltbeat"  nohref="nohref" />
+        <area shape="rect" coords="694,583,917,625" alt="Rae Sremmurd"  nohref="nohref" />
+        <area shape="rect" coords="516,581,681,626" alt="Purity Ring"  nohref="nohref" />
+        <area shape="rect" coords="400,584,502,628" alt="G-Eazy"  nohref="nohref" />
+        <area shape="rect" coords="96,583,386,627" alt="Of Monsters and Men"  nohref="nohref" />
+        <area shape="rect" coords="94,632,414,672" alt="The Last Shadow Puppets"  nohref="nohref" />
+        <area shape="rect" coords="426,629,600,672" alt="Joey Bada$$"  nohref="nohref" />
+        <area shape="rect" coords="609,627,770,672" alt="DJ Mustard"  nohref="nohref" />
+        <area shape="rect" coords="776,628,881,671" alt="Borns"  nohref="nohref" />
+        <area shape="rect" coords="893,628,1150,671" alt="Christine and the Queens"  nohref="nohref" />
+        <area shape="rect" coords="1159,629,1299,673" alt="Snakeships"  nohref="nohref" />
+        <area shape="rect" coords="1310,629,1511,674" alt="Robert Delong"  nohref="nohref" />
+        <area shape="rect" coords="1523,627,1675,673" alt="Bob Moses"  nohref="nohref" />
+        <area shape="rect" coords="1547,674,1625,716" alt="Sasha"  nohref="nohref" />
+        <area shape="rect" coords="1359,677,1533,717" alt="Marvin Staples"  nohref="nohref" />
+        <area shape="rect" coords="1252,677,1347,713" alt="HEALTH band"  nohref="nohref" />
+        <area shape="rect" coords="1183,675,1240,713" alt="Lido"  nohref="nohref" />
+        <area shape="rect" coords="879,672,1172,714" alt="Nicole Moudaber and Skin"  nohref="nohref" />
+        <area shape="rect" coords="693,675,869,716" alt="Years and Years"  nohref="nohref" />
+        <area shape="rect" coords="526,674,682,716" alt="Black Coffee"  nohref="nohref" />
+        <area shape="rect" coords="357,675,514,714" alt="Parov Stelar"  nohref="nohref" />
+        <area shape="rect" coords="172,676,345,715" alt="Marco Carola"  nohref="nohref" />
+        <area shape="rect" coords="93,677,162,716" alt="Ibeyi"  nohref="nohref" />
+        <area shape="rect" coords="95,719,219,756" alt="Goldroom"  nohref="nohref" />
+        <area shape="rect" coords="228,718,424,757" alt="Carla Morrison"  nohref="nohref" />
+        <area shape="rect" coords="433,717,594,758" alt="Nic Fanciulli"  nohref="nohref" />
+        <area shape="rect" coords="600,718,815,758" alt="The Fron Bottoms"  nohref="nohref" />
+        <area shape="rect" coords="95,759,320,799" alt="George FitzGerald"  nohref="nohref" />
+        <area shape="rect" coords="328,759,403,798" alt="DJ EZ"  nohref="nohref" />
+        <area shape="rect" coords="514,760,608,798" alt="HAELOS"  nohref="nohref" />
+        <area shape="rect" coords="616,761,720,799" alt="Lapsley"  nohref="nohref" />
+        <area shape="rect" coords="96,802,215,838" alt="SG Lewis"  nohref="nohref" />
+        <area shape="rect" coords="225,801,367,838" alt="Sheer Mag"  nohref="nohref" />
+        <area shape="rect" coords="377,802,594,838" alt="Mbongwana Star"  nohref="nohref" />
+        <area shape="rect" coords="603,801,795,839" alt="Nina Las Vegas"  nohref="nohref" />
+        <area shape="rect" coords="805,801,895,839" alt="Masha Band"  nohref="nohref" />
+        <area shape="rect" coords="727,759,1059,798" alt="Lucent Dossier Experience"  nohref="nohref" />
+        <area shape="rect" coords="1071,758,1243,799" alt="Miami Horror"  nohref="nohref" />
+        <area shape="rect" coords="825,718,914,759" alt="Skepta"  nohref="nohref" />
+        <area shape="rect" coords="923,717,1053,756" alt="Sam Feldt"  nohref="nohref" />
+        <area shape="rect" coords="1059,717,1177,755" alt="Lemaitre"  nohref="nohref" />
+        <area shape="rect" coords="1185,718,1355,757" alt="Louis the Child"  nohref="nohref" />
+        <area shape="rect" coords="1365,720,1467,758" alt="Frances"  nohref="nohref" />
+        <area shape="rect" coords="413,760,504,796" alt="Gallant"  nohref="nohref" />
+        <area shape="rect" coords="97,965,301,1027" alt="Ice Cube"  nohref="nohref" />
+        <area shape="rect" coords="317,964,567,1027" alt="Disclosure"  nohref="nohref" />
+        <area shape="rect" coords="580,965,700,1029" alt="Zedd"  nohref="nohref" />
+        <area shape="rect" coords="713,965,996,1031" alt="Asap Rocky"  nohref="nohref" />
+        <area shape="rect" coords="1006,966,1261,1026" alt="CHVRCHES"  nohref="nohref" />
+        <area shape="rect" coords="1275,966,1434,1027" alt="Halsey"  nohref="nohref" />
+        <area shape="rect" coords="1446,965,1703,1031" alt="James Bay"  nohref="nohref" />
+        <area shape="rect" coords="1633,1033,1704,1071" alt="ZHU"  nohref="nohref" />
+        <area shape="rect" coords="1544,1033,1624,1073" alt="Lush"  nohref="nohref" />
+        <area shape="rect" coords="1259,1029,1533,1075" alt="Silversun Pickups"  nohref="nohref" />
+        <area shape="rect" coords="1032,1029,1245,1078" alt="Gary Clark Jr."  nohref="nohref" />
+        <area shape="rect" coords="873,1032,1018,1076" alt="RL Grime"  nohref="nohref" />
+        <area shape="rect" coords="748,1033,859,1077" alt="The Arcs"  nohref="nohref" />
+        <area shape="rect" coords="523,1030,740,1077" alt="Run the Jewels "  nohref="nohref" />
+        <area shape="rect" coords="248,1030,513,1076" alt="Courtney Barnett"  nohref="nohref" />
+        <area shape="rect" coords="116,1029,231,1078" alt="Grimes"  nohref="nohref" />
+        <area shape="rect" coords="295,1078,451,1119" alt="Deerhunter"  nohref="nohref" />
+        <area shape="rect" coords="462,1079,831,1119" alt="Unknown Mortal Orchestra"  nohref="nohref" />
+        <area shape="rect" coords="841,1078,912,1122" alt="Rhye"  nohref="nohref" />
+        <area shape="rect" coords="923,1077,1094,1120" alt="Bat For Lashes"  nohref="nohref" />
+        <area shape="rect" coords="1104,1077,1245,1121" alt="The Damned"  nohref="nohref" />
+        <area shape="rect" coords="1253,1078,1440,1121" alt="Vince Staples"  nohref="nohref" />
+        <area shape="rect" coords="1451,1076,1607,1121" alt="Nina Kraviz"  nohref="nohref" />
+        <area shape="rect" coords="1620,1078,1701,1119" alt="Snails"  nohref="nohref" />
+        <area shape="rect" coords="1601,1123,1702,1161" alt="DJ Koze"  nohref="nohref" />
+        <area shape="rect" coords="1496,1123,1591,1161" alt="Shamir"  nohref="nohref" />
+        <area shape="rect" coords="1296,1121,1487,1162" alt="Mon Le Tough"  nohref="nohref" />
+        <area shape="rect" coords="1126,1122,1288,1162" alt="AlunaGeorge"  nohref="nohref" />
+        <area shape="rect" coords="1607,1163,1702,1205" alt="Dubfire"  nohref="nohref" />
+        <area shape="rect" coords="1477,1164,1597,1204" alt="Zella Day"  nohref="nohref" />
+        <area shape="rect" coords="1370,1163,1469,1204" alt="Alvvays"  nohref="nohref" />
+        <area shape="rect" coords="1264,1164,1360,1204" alt="Protoje"  nohref="nohref" />
+        <area shape="rect" coords="1157,1164,1254,1202" alt="SOPHIE"  nohref="nohref" />
+        <area shape="rect" coords="1617,1206,1702,1243" alt="Cloves"  nohref="nohref" />
+        <area shape="rect" coords="1382,1205,1607,1244" alt="The Black Modonna"  nohref="nohref" />
+        <area shape="rect" coords="1197,1204,1372,1247" alt="GoGo Penguin"  nohref="nohref" />
+        <area shape="rect" coords="1531,1248,1703,1285" alt="The Dead Ships"  nohref="nohref" />
+        <area shape="rect" coords="1425,1244,1519,1286" alt="Phase"  nohref="nohref" />
+        <area shape="rect" coords="1163,1248,1415,1286" alt="Amine Edge and Dance"  nohref="nohref" />
+        <area shape="rect" coords="1091,1206,1188,1245" alt="Algiers"  nohref="nohref" />
+        <area shape="rect" coords="898,1249,1151,1287" alt="Strangers You Know"  nohref="nohref" />
+        <area shape="rect" coords="320,1121,496,1161" alt="RUFUS DU SOL"  nohref="nohref" />
+        <area shape="rect" coords="508,1122,721,1164" alt="Lost Frequencies"  nohref="nohref" />
+        <area shape="rect" coords="733,1122,849,1163" alt="Chronixx"  nohref="nohref" />
+        <area shape="rect" coords="857,1124,931,1161" alt="Vanic"  nohref="nohref" />
+        <area shape="rect" coords="943,1124,1115,1161" alt="Justin Martin"  nohref="nohref" />
+        <area shape="rect" coords="986,1163,1149,1204" alt="Mr. Carmack"  nohref="nohref" />
+        <area shape="rect" coords="884,1164,975,1201" alt="Ex Her"  nohref="nohref" />
+        <area shape="rect" coords="974,1206,1083,1245" alt="Matoma"  nohref="nohref" />
+        <area shape="rect" coords="882,1205,965,1245" alt="DMA&apos;s"  nohref="nohref" />
+        <area shape="rect" coords="686,1204,871,1249" alt="Matthew Dear"  nohref="nohref" />
+        <area shape="rect" coords="821,1166,875,1202" alt="SZA"  nohref="nohref" />
+        <area shape="rect" coords="680,1166,810,1201" alt="Moon Taxi"  nohref="nohref" />
+        <area shape="rect" coords="447,1164,669,1201" alt="BADBADNOTGOOD"  nohref="nohref" />
+        <area shape="rect" coords="96,1318,600,1410" alt="Calvin Harris"  nohref="nohref" />
+        <area shape="rect" coords="96,1413,172,1475" alt="Sia"  nohref="nohref" />
+        <area shape="rect" coords="189,1412,473,1482" alt="Major Lazer"  nohref="nohref" />
+        <area shape="rect" coords="490,1412,628,1475" alt="Flume"  nohref="nohref" />
+        <area shape="rect" coords="647,1412,947,1476" alt="Beach House"  nohref="nohref" />
+        <area shape="rect" coords="96,1481,449,1528" alt="Edward Sharpe and the Magnetic Zeros"  nohref="nohref" />
+        <area shape="rect" coords="464,1482,640,1526" alt="Matt and Kim"  nohref="nohref" />
+        <area shape="rect" coords="655,1482,893,1526" alt="Chris Stapleton"  nohref="nohref" />
+        <area shape="rect" coords="96,1529,258,1571" alt="Marco Plex"  nohref="nohref" />
+        <area shape="rect" coords="270,1528,372,1574" alt="Baauer"  nohref="nohref" />
+        <area shape="rect" coords="385,1528,489,1570" alt="KSHMR"  nohref="nohref" />
+        <area shape="rect" coords="501,1528,831,1570" alt="Nathaniel Rateliff and the Night Sweats"  nohref="nohref" />
+        <area shape="rect" coords="96,1573,319,1610" alt="Hudson Mohawke"  nohref="nohref" />
+        <area shape="rect" coords="329,1574,575,1612" alt="Kamasi Washington"  nohref="nohref" />
+        <area shape="rect" coords="95,1615,275,1652" alt="John Digweed"  nohref="nohref" />
+        <area shape="rect" coords="286,1613,447,1653" alt="Thomas Jack"  nohref="nohref" />
+        <area shape="rect" coords="96,1657,297,1696" alt="Chrystal Fighters"  nohref="nohref" />
+        <area shape="rect" coords="308,1658,439,1696" alt="The Vandals"  nohref="nohref" />
+        <area shape="rect" coords="96,1700,216,1738" alt="Soul Clap"  nohref="nohref" />
+        <area shape="rect" coords="227,1700,314,1737" alt="De Lux"  nohref="nohref" />
+        <area shape="rect" coords="326,1700,427,1738" alt="Girlpool"  nohref="nohref" />
+        <area shape="rect" coords="456,1612,653,1652" alt="Anderson .Paak"  nohref="nohref" />
+        <area shape="rect" coords="449,1657,561,1696" alt="Joywave"  nohref="nohref" />
+        <area shape="rect" coords="438,1698,549,1738" alt="Fur Coat"  nohref="nohref" />
+        <area shape="rect" coords="562,1698,679,1738" alt="AC Slater"  nohref="nohref" />
+        <area shape="rect" coords="571,1657,685,1695" alt="PRAYERS"  nohref="nohref" />
+        <area shape="rect" coords="587,1572,900,1612" alt="Claptone IMMORTAL LIVE"  nohref="nohref" />
+        <area shape="rect" coords="666,1613,816,1656" alt="Nosaj Thing"  nohref="nohref" />
+        <area shape="rect" coords="697,1657,875,1694" alt="Young Fathers"  nohref="nohref" />
+        <area shape="rect" coords="693,1696,878,1741" alt="Steady Holiday"  nohref="nohref" />
+        <area shape="rect" coords="889,1696,1037,1737" alt="MINT FIELD"  nohref="nohref" />
+        <area shape="rect" coords="885,1656,995,1695" alt="The Heavy"  nohref="nohref" />
+        <area shape="rect" coords="827,1613,971,1656" alt="Deafheaven"  nohref="nohref" />
+        <area shape="rect" coords="1005,1655,1093,1694" alt="Tei Shi"  nohref="nohref" />
+        <area shape="rect" coords="907,1479,1127,1526" alt="The Cold War Kids"  nohref="nohref" />
+        <area shape="rect" coords="846,1528,1189,1575" alt="Adan Beyer and Ida Engberg"  nohref="nohref" />
+        <area shape="rect" coords="911,1575,1077,1611" alt="Tokimonsta"  nohref="nohref" />
+        <area shape="rect" coords="984,1611,1100,1655" alt="Epik High"  nohref="nohref" />
+        <area shape="rect" coords="1101,1656,1252,1695" alt="Meg Myers"  nohref="nohref" />
+        <area shape="rect" coords="1263,1656,1343,1696" alt="Cassy"  nohref="nohref" />
+        <area shape="rect" coords="1111,1611,1230,1653" alt="Tensnake"  nohref="nohref" />
+        <area shape="rect" coords="1242,1612,1398,1654" alt="Alessia Cara"  nohref="nohref" />
+        <area shape="rect" coords="1089,1574,1386,1609" alt="Melody&apos;s Echo Chamber"  nohref="nohref" />
+        <area shape="rect" coords="962,1412,1130,1474" alt="The 1975"  nohref="nohref" />
+        <area shape="rect" coords="1146,1412,1309,1476" alt="Rancid"  nohref="nohref" />
+        <area shape="rect" coords="1143,1477,1324,1529" alt="Death Grips"  nohref="nohref" />
+        <area shape="rect" coords="1398,1574,1495,1609" alt="Autolux"  nohref="nohref" />
+        <area shape="rect" coords="1202,1529,1296,1570" alt="Tchami"  nohref="nohref" />
+        <area shape="rect" coords="1306,1530,1450,1572" alt="Wolf Alice"  nohref="nohref" />
+        <area shape="rect" coords="1461,1528,1597,1572" alt="Pete Yorn"  nohref="nohref" />
+        <area shape="rect" coords="1337,1478,1589,1525" alt="The Chainsmokers"  nohref="nohref" />
+        <area shape="rect" coords="1325,1410,1603,1477" alt="Miike Snow"  nohref="nohref" />
+    </map>
+</div>
+<div id="login-container" class="pre-auth">
+    This application requires access to your YouTube account.
+    Please <a href="#" id="login-link">authorize</a> to continue.
+</div>
+<!--<div id="video-container"></div>-->
+<div class="button-container">
+    <button id="prev-button" class="paging-button" onclick="previousSong();">Previous Song</button>
+    <button id="next-button" class="paging-button" onclick="nextSong();">Next Song</button>
+</div>
 
 
-<div id="chatWindow">
-    <div id="windowHeader">
-    </div>
-    <div id="windowBody">
-        <ul class="items">
+
+
+<div id="buttons">
+    <button id="play">PLAY</button>
+    <button id="pause">PAUSE</button>
+    <label> <input id="query" value='cats' type="text"/><button id="search-button" disabled onclick="search()">Search</button></label>
+</div>
+<button id="next">NEXT SONG</button>
+
+<div class="playControls g-z-index-header m-visible"><div class="playControls__inner">
+    <div class="playControls__wrapper l-container l-fullwidth">
+        <ul class="playControls__controls sc-list-nostyle g-dark sc-clearfix">
+            <li class="playControls__playPauseSkip">
+                <button class="skipControl playControls__icon sc-ir skipControl__previous" tabindex="">Skip to previous</button>
+                <button class="playControl playControls__icon sc-ir" tabindex="" title="Play current">Play current</button>
+                <button class="skipControl playControls__icon sc-ir skipControl__next" tabindex="">Skip to next</button>
+            </li>
+            <li class="playControls__repeat">
+                <button title="Repeat playing track" class="repeatControl sc-ir">Repeat track</button>
+            </li>
+            <li class="playControls__timeline sc-clearfix">
+                <div class="playbackTimeline sc-clearfix is-scrubbable has-sound"><div class="playbackTimeline__timePassed"><span class="sc-visuallyhidden">Current time: 3 minutes 45 seconds</span><span aria-hidden="true">3:45</span></div>
+                    <div class="playbackTimeline__progressWrapper" role="progressbar" aria-valuemax="226058" aria-valuenow="225007.02899999998" aria-valuetext="3 minutes 45 seconds">
+                        <div class="playbackTimeline__progressBackground"></div>
+                        <div class="playbackTimeline__progressBar" style="width: 487px;"></div>
+                        <div class="playbackTimeline__progressHandle sc-ir" style="left: 487px;"></div>
+                    </div>
+                    <div class="playbackTimeline__duration"><span class="sc-visuallyhidden">Duration: 3 minutes 46 seconds</span><span aria-hidden="true">3:46</span></div>
+                    <div class="playbackTimeline__snippetIndicator">
+                        <span class="sc-snippet-badge sc-snippet-badge-small">Preview</span>
+                    </div>
+                </div>
+            </li>
+            <li class="playControls__volume">
+                <div class="volume" data-level="10"><div class="sc-visuallyhidden">Volume</div>
+                    <div class="volume__iconWrapper">
+                        <button class="volume__button volume__speakerIcon sc-ir">
+                            Toggle mute
+                        </button>
+                    </div>
+
+                    <div class="sc-hidden" id="volume__sliderDescription">Use shift and the arrow up and down keys to change the volume.</div>
+                    <div class="volume__sliderWrapper" role="slider" aria-valuemin="0" aria-valuemax="1" aria-label="Volume" aria-valuenow="1">
+                        <div class="volume__sliderBackground"></div>
+                        <div class="volume__sliderProgress" style="height: 92px;"></div>
+                        <div class="volume__sliderHandle" style="top: 10px;"></div>
+                    </div>
+                </div>
+            </li>
         </ul>
-    </div>
-    <div id="windowFooter">
-        <input id="messageInput" type="text" placeholder="Enter your message here">
-        <div id="buttonSend">send</div>
+
+        <div class="playControls__soundBadge">
+            <div class="playbackSoundBadge paused">  <a href="/zedd/zedd-true-colors-grey-remix" class="playbackSoundBadge__avatar sc-media-image" tabindex="-1">
+                <div class="image readOnly customImage sc-artwork sc-artwork-placeholder-1 m-loaded" style="height: 30px; width: 30px;"><span style="width: 30px; height: 30px; opacity: 1; background-image: url(&quot;https://i1.sndcdn.com/artworks-000150123047-o6jytg-t120x120.jpg&quot;);" class="sc-artwork sc-artwork-placeholder-1  image__full g-opacity-transition" aria-label="Zedd - True Colors (Grey Remix)" aria-role="img"></span>
+
+                </div>
+            </a>
+                <div class="playbackSoundBadge__titleContextContainer">
+                    <a href="" class="playbackSoundBadge__context sc-link-light sc-truncate" title="Playing from search results">Playing from search results</a>
+                    <a href="/zedd/zedd-true-colors-grey-remix" class="playbackSoundBadge__title sc-truncate" title="Zedd - True Colors (Grey Remix)">
+                        <span class="sc-visuallyhidden">Current track: Zedd - True Colors (Grey Remix)</span><span aria-hidden="true">Zedd - True Colors (Grey Remix)</span>
+                    </a>
+                </div>
+                <div class="playbackSoundBadge__actions">
+                    <button class="sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-responsive sc-button-icon" aria-describedby="tooltip-755" tabindex="0" title="Like">Like</button>
+
+                </div></div>
+        </div>
+
+        <div class="playControls__panel">
+            <div class="playControlsPanel sc-font-body sc-background-darkgrey"></div>
+        </div>
     </div>
 </div>
-<div id="otherExample">
-    see another project
 </div>
+
+
+<div class="player-wrapper">
+    <div id="player"></div>
+</div>
+
+
 <script>
-   $(document).ready(function(){
-        var chatWindow = new ChatWindow;
-        chatWindow.init();
-   })
+    imageMapResize();
 </script>
 
+
+
 </body>
+</html>
