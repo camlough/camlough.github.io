@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1796d75d-ce10-4a93-b528-2b5d7037e874" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/auth.js" afterPath="$PROJECT_DIR$/js/auth.js" />
-    </list>
+    <list default="true" id="1796d75d-ce10-4a93-b528-2b5d7037e874" name="Default" comment="" />
     <ignored path="camlough.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -137,12 +134,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458940412076</updated>
-      <workItem from="1458940413345" duration="44000" />
+      <workItem from="1458940413345" duration="171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44000" />
+    <option name="totallyTimeSpent" value="171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-858" y="-136" width="858" height="1057" extended-state="0" />
