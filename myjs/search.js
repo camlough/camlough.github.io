@@ -98,6 +98,8 @@ function getRandomIntInclusive(min, max) {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
+
+    event.target.playVideo();
     $('.song-info-container').empty().append('<div>Coachella 2015: Thank You</div>');
 
     $('#play-button').click(function(){
