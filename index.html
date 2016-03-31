@@ -437,8 +437,10 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
+
+            $('map').imageMapResize();
             setTimeout(function(){
-                $('map').imageMapResize();
+                $(window).trigger('resize');
             },100);
 
             $('.show-video-button').click(function(){
