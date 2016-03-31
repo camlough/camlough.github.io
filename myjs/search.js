@@ -27,7 +27,6 @@ function search(artist, token) {
     request.execute(function(response) {
         var str = JSON.stringify(response.result);
         nextPageToken = response.result.nextPageToken;
-        //console.log(response.result);
         resp = response.result.items;
         playSong();
     });
@@ -73,7 +72,6 @@ function nextSong(skip){
         var artist = randomArtist(posterId);
         search(artist);
         unselectAll();
-        console.log(artist);
         var elem = $("area[alt='"+artist+"']");
         var data = mapHighlightConfig();
         data.alwaysOn = true;
@@ -139,7 +137,6 @@ function onPlayerReady(event) {
         $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
         var artist = $(this).attr('alt');
         search(artist);
-        console.log($(this).attr('alt'));
     })
 
     $('#shuffle-button').click(function(){
