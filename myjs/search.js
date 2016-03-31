@@ -167,11 +167,11 @@ function onPlayerReady(event) {
 
             setTimeout(function(){
                 $('.show-video-button').addClass('visible');
-                if ($.cookie('playvideo') == null) {
+                //if ($.cookie('playvideo') == null) {
                     $('.show-video-button').click();
                     player.playVideo();
                     $.cookie('playvideo', 'done', 365);
-                }
+                //}
             },1000);
         };
     }
