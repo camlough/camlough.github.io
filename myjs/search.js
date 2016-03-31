@@ -167,6 +167,9 @@ function onPlayerReady(event) {
 
             setTimeout(function(){
                 $('.show-video-button').addClass('visible');
+                $('.hide-video-button').toggleClass('hidden');
+                $('.show-video-button').toggleClass('hidden');
+                $('.show-video-button').click();
             },1000);
         };
     }
