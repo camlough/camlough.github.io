@@ -38,7 +38,7 @@
 <body id="page-top">
 
 
-<div class="player-wrapper">
+<div class="player-wrapper" class="desktop-only">
     <div id="player" class="collapse"></div>
     <button class="btn btn-primary show-video-button pulse" type="button" data-toggle="collapse" data-target="#player" aria-expanded="false" aria-controls="player">
         <span class="glyphicon glyphicon-triangle-bottom"></span> Show Video
@@ -81,7 +81,7 @@
 
     <header>
 
-        <div class="header-content">
+        <div class="header-content desktop-only">
             <div class="header-content-inner">
                 <h1>Discover artists and their music before the festival</h1>
                 <hr>
@@ -91,10 +91,18 @@
             </div>
         </div>
 
+        <div class="header-content mobile-fail">
+            <div class="header-content-inner">
+                <h1>Mobile Site Coming Soon!</h1>
+                <hr>
+                <p>Please check us out on a computer!</p>
+            </div>
+        </div>
+
 
     </header>
 
-    <section id="coachella-section">
+    <section id="coachella-section" class="desktop-only">
 
         <div class="poster">
             <img id="coachella-poster" src="img/coachella_poster.jpg" id="coachella-poster" width="100%" border="0" usemap="#map" />
@@ -283,7 +291,7 @@
         <!--</div>-->
     </section>
 
-    <section id="dolab-section">
+    <section id="dolab-section" class="desktop-only">
         <div class="poster">
             <img src="img/dolablarge.jpg" width="100%" border="0" usemap="#dolabmap" id="dolab-poster" />
             <map name="dolabmap" class="image-map dolab-map">
@@ -353,10 +361,7 @@
                     <hr class="primary">
                     <p>Send us an email and we will get back to you as soon as possible!</p>
                 </div>
-                <!--<div class="col-lg-4 col-lg-offset-2 text-center">-->
-                    <!--<i class="fa fa-phone fa-3x wow bounceIn"></i>-->
-                    <!--&lt;!&ndash;<p>123-456-6789</p>&ndash;&gt;-->
-                <!--</div>-->
+
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
@@ -366,7 +371,7 @@
     </section>
 
 
-    <div class="player-controls-bar">
+    <div class="player-controls-bar" class="desktop-only">
         <div class="background-blur-container">
             <div class="background-blur">
 

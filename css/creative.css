@@ -231,6 +231,19 @@ header .header-content .header-content-inner .btn.coachella {
     background:#F0773E
 }
 
+.mobile-fail{
+    display:none;
+}
+
+@media(max-width:766px){
+    .mobile-fail{
+        display:block;
+    }
+    .desktop-only{
+        display:none;
+    }
+}
+
 @media(min-width:768px) {
     header {
         min-height: 100%;
