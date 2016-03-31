@@ -80,8 +80,8 @@
       <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myjs/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+            <state relative-caret-position="293">
+              <caret line="174" column="8" selection-start-line="174" selection-start-column="8" selection-end-line="175" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -324,12 +324,12 @@
       <option name="presentableId" value="Default" />
       <updated>1458940412076</updated>
       <workItem from="1458940413345" duration="171000" />
-      <workItem from="1459188888607" duration="36559000" />
+      <workItem from="1459188888607" duration="37152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36730000" />
+    <option name="totallyTimeSpent" value="37323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -449,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myjs/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="171" column="48" selection-start-line="171" selection-start-column="48" selection-end-line="171" selection-end-column="48" />
+        <state relative-caret-position="293">
+          <caret line="174" column="8" selection-start-line="174" selection-start-column="8" selection-end-line="175" selection-end-column="38" />
           <folding />
         </state>
       </provider>

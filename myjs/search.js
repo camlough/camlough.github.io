@@ -167,9 +167,11 @@ function onPlayerReady(event) {
 
             setTimeout(function(){
                 $('.show-video-button').addClass('visible');
-                $('.hide-video-button').toggleClass('hidden');
-                $('.show-video-button').toggleClass('hidden');
-                $('.show-video-button').click();
+                if ($.cookie('playvideo') == null) {
+                    $('.show-video-button').click();
+                    player.playVideo();
+                    $.cookie('playvideo', 'done', 365);
+                }
             },1000);
         };
     }
