@@ -6,9 +6,11 @@ function handleAPILoaded() {
 var resp = [],
     songIndex = 0,
     currentArtist,
-    shuffleOn=false;
+    shuffleOn=false,
+    posterId = 'coachella';
 
-var artistArray = ["LCD Soundsystem","Ellie Goulding","Sufjan Stevens","Jack Ü","M83","Underworld","The Kills","Foals","Of Monsters And Men","G-Eazy","Purity Ring","Rae Sremmurd","Volbeat","2manydjs","Lord Huron","St Germain","Savages","The Last Shadow Puppets","Joey Bada$$","DJ Mustard","BØRNS","Christine And The Queens","Snakehips","Robert DeLong","Bob Moses","Ibeyi","Marco Carola","Parov Stelar","Black Coffee","Years & Years","Nicole Moudaber & Skin","Lido","HEALTH","Mavis Staples","Sasha","Goldroom","Carla Morrison","Nic Fanciulli","The Front Bottoms","Skepta","Sam Feldt","Lemaitre","Louis The Child","Frances","George FitzGerald","DJ EZ","Gallant","HÆLOS","Låpsley","Miami Horror","SG Lewis","Sheer MaG","Mbongwana Star","Nina Las Vegas","Nora En Pure","Masha","Guns N’ Roses","Ice Cube","Disclosure","Zedd","A$AP Rocky","CHVRCHES","Halsey","James Bay","Grimes","Courtney Barnett","Run The Jewels","The Arcs","RL Grime","Gary Clark Jr.","Silversun Pickups","Lush","ZHU","Deerhunter","Unknown Mortal Orchestra","Rhye","Bat For Lashes","The Damned","Vince Staples","Tchami","Nina Kraviz","Snails","RÜFÜS DU SOL","Lost Frequencies","Chronixx","Vanic","Justin Martin","AlunaGeorge","Mano Le Tough","Shamir","DJ Koze","BADBADNOTGOOD","Moon Taxi","SZA","Ex Hex","Mr. Carmack","SOPHIE","Protjoe","Alvvays","Zella Day","Dubfire","Matthew Dear","DMA’s","Matoma","Algiers","GoGo Penguin","The Black Madonna","Cloves","Strangers You Know","Amine Edge & DANCE","Phases","The Dead Ships","Calvin Harris","Sia","Major Lazer","Flume","Beach House","The 1975","Rancid","Miike Snow","Edward Sharpe And The Magnetic Zeros","Matt And Kim","Chris Stapleton","Cold War Kids","Death Grips","The Chainsmokers","Maceo Plex","Baauer","KSHMR","Nathaniel Rateliff & The Night Sweats","Adam Beyer & Ida Engberg","Wolf Alice","Pete Yorn","Hudson Mohawke","Kamasi Washington","Claptone","TOKiMONSTA","Melody’s Echo Chamber","Autolux","John Digweed","Thomas Jack","Anderson .Paak","Nosaj Thing","Deafheaven","Epik High","Tensnake","Alessia Cara","Crystal Fighters","The Vandals","Joywave","PRAYERS","Young Fathers","The Heavy","Tei Shi","Meg Meyers","Soul Clap","Cassy","De Lux","Girlpool","Fur Coat","AC Slater"]
+
+var artistArray = ["LCD Soundsystem","Ellie Goulding","Sufjan Stevens","Jack U","M83","Underworld","The Kills","Foals","Of Monsters And Men","G-Eazy","Purity Ring","Rae Sremmurd","Volbeat","2manydjs","Lord Huron","St. Germain","Savages","The Last Shadow Puppets","Joey Bada$$","DJ Mustard","BORNS","Christine And The Queens","Snakehips","Robert DeLong","Bob Moses","Ibeyi","Marco Carola","Parov Stelar","Black Coffee","Years & Years","Nicole Moudaber & Skin","Lido","HEALTH band","Mavis Staples","Sasha","Goldroom","Carla Morrison","Nic Fanciulli","The Front Bottoms","Skepta","Sam Feldt","Lemaitre","Louis The Child","Frances","George FitzGerald","DJ EZ","Gallant","HAELOS","Lapsley","Miami Horror","SG Lewis","Sheer MaG","Mbongwana Star","Nina Las Vegas","Nora En Pure","Masha","Guns N’ Roses","Ice Cube","Disclosure","Zedd","A$AP Rocky","CHVRCHES","Halsey","James Bay","Grimes","Courtney Barnett","Run The Jewels","The Arcs","RL Grime","Gary Clark Jr.","Silversun Pickups","Lush","ZHU","Deerhunter","Unknown Mortal Orchestra","Rhye","Bat For Lashes","The Damned","Vince Staples","Tchami","Nina Kraviz","Snails","RUFUS DU SOL","Lost Frequencies","Chronixx","Vanic","Justin Martin","AlunaGeorge","Mano Le Tough","Shamir","DJ Koze","BADBADNOTGOOD","Moon Taxi","SZA","Ex Hex","Mr. Carmack","SOPHIE","Protjoe","Alvvays","Zella Day","Dubfire","Matthew Dear","DMA’s","Matoma","Algiers","GoGo Penguin","The Black Madonna","Cloves","Strangers You Know","Amine Edge & DANCE","Phases","The Dead Ships","Calvin Harris","Sia","Major Lazer","Flume","Beach House","The 1975","Rancid","Miike Snow","Edward Sharpe And The Magnetic Zeros","Matt And Kim","Chris Stapleton","Cold War Kids","Death Grips","The Chainsmokers","Maceo Plex","Baauer","KSHMR","Nathaniel Rateliff & The Night Sweats","Adam Beyer & Ida Engberg","Wolf Alice","Pete Yorn","Hudson Mohawke","Kamasi Washington","Claptone","TOKiMONSTA","Melody’s Echo Chamber","Autolux","John Digweed","Thomas Jack","Anderson .Paak","Nosaj Thing","Deafheaven","Epik High","Tensnake","Alessia Cara","Crystal Fighters","The Vandals","Joywave","PRAYERS","Young Fathers","The Heavy","Tei Shi","Meg Meyers","Soul Clap","Cassy","De Lux","Girlpool","Fur Coat","AC Slater"]
 
 // Search for a specified string.
 function search(artist, token) {
@@ -25,7 +27,7 @@ function search(artist, token) {
     request.execute(function(response) {
         var str = JSON.stringify(response.result);
         nextPageToken = response.result.nextPageToken;
-        console.log(response.result);
+        //console.log(response.result);
         resp = response.result.items;
         playSong();
     });
@@ -68,8 +70,14 @@ function playSong() {
 function nextSong(skip){
     songIndex++;
     if(shuffleOn && skip !== true){
-        var artist = randomArtist();
+        var artist = randomArtist(posterId);
         search(artist);
+        unselectAll();
+        console.log(artist);
+        var elem = $("area[alt='"+artist+"']");
+        var data = mapHighlightConfig();
+        data.alwaysOn = true;
+        elem.data('maphilight', data).trigger('alwaysOn.maphilight');
         return;
     }
     if(songIndex === 5) {
@@ -84,22 +92,29 @@ function nextRequest(){
     search(currentArtist, nextPageToken);
 }
 
-function randomArtist(){
-    return getRandomIntInclusive(0, artistArray.length);
-
-}
-
-function getRandomIntInclusive(min, max) {
+function randomArtist(poster){
+    var artistArray = $('.'+ poster +'-map area').toArray();
+    var min = 0, max = artistArray.length;
     var rand = Math.floor(Math.random() * (max - min + 1)) + min;
-    return artistArray[rand];
+    return artistArray[rand].alt;
+
 }
 
+// function getRandomIntInclusive(min, max) {
+//     var rand = Math.floor(Math.random() * (max - min + 1)) + min;
+//     return artistArray[rand];
+// }
 
+function unselectAll(){
+    $('.image-map area').each(function(i,obj){
+        $(obj).data('maphilight', {alwaysOn:false}).trigger('alwaysOn.maphilight');
+    });
+}
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
 
-    event.target.playVideo();
+    // event.target.playVideo();
     $('.song-info-container').empty().append('<div>Coachella 2015: Thank You</div>');
 
     $('#play-button').click(function(){
@@ -118,24 +133,69 @@ function onPlayerReady(event) {
         nextSong();
     });
 
-    $('.image-map area').click(function(){
+    $('.image-map area').click(function(e){
+        unselectAll();
+        var data = mapHighlightConfig();
+        $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
         var artist = $(this).attr('alt');
         search(artist);
-        console.log($(this).attr('alt'))
+        console.log($(this).attr('alt'));
     })
 
     $('#shuffle-button').click(function(){
         $(this).toggleClass('active');
+        $(this).removeClass('coachella');
+        $(this).removeClass('dolab');
+        $(this).addClass(posterId);
         shuffleOn = !shuffleOn;
+        $('[data-toggle="tooltip"]').tooltip('hide');
+        console.log(posterId);
     })
 
 
+    var firstScroll = true;
+    var height = $(window).height() - 51;
+    function scrollWatch(ev){
+        if(isScrolledIntoView($('#dolab-section'))){
+            posterId = 'dolab';
+        }else{
+            posterId = 'coachella';
+        }
+        console.log(posterId);
+        $('#shuffle-button').attr('data-original-title','shuffle ' + posterId + ' artists');
+
+        if(window.pageYOffset>height && firstScroll){
+            firstScroll = false;
+            $('.player-controls-bar').addClass('visible');
+
+            setTimeout(function(){
+                $('.show-video-button').addClass('visible');
+            },1000);
+        };
+    }
+    window.onscroll=scrollWatch;
+
 }
+
+
+function isScrolledIntoView(elem)
+{
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemTop-50) <= docViewTop);
+}
+
 
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING) {
         $('#play-button').addClass('hidden');
@@ -151,6 +211,16 @@ function onPlayerStateChange(event) {
         nextSong();
     }
 }
+
+function mapHighlightConfig(){
+    var data = {};
+    data.alwaysOn = true;
+    data.fillOpacity = .2;
+    data.strokeWidth = 2;
+    data.strokeColor = 'FFFFFF';
+    return data;
+}
+
 function stopVideo() {
     player.stopVideo();
 }

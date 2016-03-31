@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>3DayPlay</title>
+    <title>Festival Ear</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -59,21 +59,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">coachella artists</a>
+                <a class="navbar-brand page-scroll" href="#page-top">festival ear</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="nav-button" id="aboutButton">About</a>
                     </li>
-                    <!--<li>-->
-                        <!--<a class="page-scroll" href="#comingsoon">Coming Soon</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="page-scroll" href="#portfolio">Portfolio</a>-->
-                    <!--</li>-->
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
@@ -87,12 +81,24 @@
 
     <header>
 
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Discover artists and their music before the festival</h1>
+                <hr>
+                <p>Lineup and music all in one place</p>
+                <a href="#coachella-section" class="btn btn-primary btn-xl page-scroll coachella">Coachella</a>
+                <a href="#dolab-section" class="btn btn-primary btn-xl page-scroll dolab">Do Lab @Coachella</a>
+            </div>
+        </div>
+
+
+    </header>
+
+    <section id="coachella-section">
+
         <div class="poster">
-            <!--<img src="coachella_poster.jpg">-->
-
-            <img id="coachella-poster" src="img/coachella_poster.jpg" width="1800" height="2400" border="0" usemap="#map" />
-
-            <map name="map" class="image-map">
+            <img id="coachella-poster" src="img/coachella_poster.jpg" id="coachella-poster" width="100%" border="0" usemap="#map" />
+            <map name="map" class="image-map coachella-map">
                 <!-- #$-:Image map file created by GIMP Image Map plug-in -->
                 <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
                 <!-- #$-:Please do not edit lines starting with "#$" -->
@@ -114,12 +120,12 @@
                 <area shape="rect" coords="694,583,917,625" alt="Rae Sremmurd"  nohref="nohref" />
                 <area shape="rect" coords="516,581,681,626" alt="Purity Ring"  nohref="nohref" />
                 <area shape="rect" coords="400,584,502,628" alt="G-Eazy"  nohref="nohref" />
-                <area shape="rect" coords="96,583,386,627" alt="Of Monsters and Men"  nohref="nohref" />
+                <area shape="rect" coords="96,583,386,627" alt="Of Monsters And Men"  nohref="nohref" />
                 <area shape="rect" coords="94,632,414,672" alt="The Last Shadow Puppets"  nohref="nohref" />
                 <area shape="rect" coords="426,629,600,672" alt="Joey Bada$$"  nohref="nohref" />
                 <area shape="rect" coords="609,627,770,672" alt="DJ Mustard"  nohref="nohref" />
-                <area shape="rect" coords="776,628,881,671" alt="Borns"  nohref="nohref" />
-                <area shape="rect" coords="893,628,1150,671" alt="Christine and the Queens"  nohref="nohref" />
+                <area shape="rect" coords="776,628,881,671" alt="BORNS"  nohref="nohref" />
+                <area shape="rect" coords="893,628,1150,671" alt="Christine And The Queens"  nohref="nohref" />
                 <area shape="rect" coords="1159,629,1299,673" alt="Snakeships"  nohref="nohref" />
                 <area shape="rect" coords="1310,629,1511,674" alt="Robert Delong"  nohref="nohref" />
                 <area shape="rect" coords="1523,627,1675,673" alt="Bob Moses"  nohref="nohref" />
@@ -127,8 +133,8 @@
                 <area shape="rect" coords="1359,677,1533,717" alt="Marvin Staples"  nohref="nohref" />
                 <area shape="rect" coords="1252,677,1347,713" alt="HEALTH band"  nohref="nohref" />
                 <area shape="rect" coords="1183,675,1240,713" alt="Lido"  nohref="nohref" />
-                <area shape="rect" coords="879,672,1172,714" alt="Nicole Moudaber and Skin"  nohref="nohref" />
-                <area shape="rect" coords="693,675,869,716" alt="Years and Years"  nohref="nohref" />
+                <area shape="rect" coords="879,672,1172,714" alt="Nicole Moudaber & Skin"  nohref="nohref" />
+                <area shape="rect" coords="693,675,869,716" alt="Years & Years"  nohref="nohref" />
                 <area shape="rect" coords="526,674,682,716" alt="Black Coffee"  nohref="nohref" />
                 <area shape="rect" coords="357,675,514,714" alt="Parov Stelar"  nohref="nohref" />
                 <area shape="rect" coords="172,676,345,715" alt="Marco Carola"  nohref="nohref" />
@@ -151,9 +157,10 @@
                 <area shape="rect" coords="825,718,914,759" alt="Skepta"  nohref="nohref" />
                 <area shape="rect" coords="923,717,1053,756" alt="Sam Feldt"  nohref="nohref" />
                 <area shape="rect" coords="1059,717,1177,755" alt="Lemaitre"  nohref="nohref" />
-                <area shape="rect" coords="1185,718,1355,757" alt="Louis the Child"  nohref="nohref" />
+                <area shape="rect" coords="1185,718,1355,757" alt="Louis The Child"  nohref="nohref" />
                 <area shape="rect" coords="1365,720,1467,758" alt="Frances"  nohref="nohref" />
                 <area shape="rect" coords="413,760,504,796" alt="Gallant"  nohref="nohref" />
+                <area shape="rect" coords="1137,863,1708,965" alt="Guns N&apos; Roses"  nohref="nohref" />
                 <area shape="rect" coords="97,965,301,1027" alt="Ice Cube"  nohref="nohref" />
                 <area shape="rect" coords="317,964,567,1027" alt="Disclosure"  nohref="nohref" />
                 <area shape="rect" coords="580,965,700,1029" alt="Zedd"  nohref="nohref" />
@@ -167,7 +174,7 @@
                 <area shape="rect" coords="1032,1029,1245,1078" alt="Gary Clark Jr."  nohref="nohref" />
                 <area shape="rect" coords="873,1032,1018,1076" alt="RL Grime"  nohref="nohref" />
                 <area shape="rect" coords="748,1033,859,1077" alt="The Arcs"  nohref="nohref" />
-                <area shape="rect" coords="523,1030,740,1077" alt="Run the Jewels "  nohref="nohref" />
+                <area shape="rect" coords="523,1030,740,1077" alt="Run The Jewels "  nohref="nohref" />
                 <area shape="rect" coords="248,1030,513,1076" alt="Courtney Barnett"  nohref="nohref" />
                 <area shape="rect" coords="116,1029,231,1078" alt="Grimes"  nohref="nohref" />
                 <area shape="rect" coords="295,1078,451,1119" alt="Deerhunter"  nohref="nohref" />
@@ -191,8 +198,8 @@
                 <area shape="rect" coords="1382,1205,1607,1244" alt="The Black Modonna"  nohref="nohref" />
                 <area shape="rect" coords="1197,1204,1372,1247" alt="GoGo Penguin"  nohref="nohref" />
                 <area shape="rect" coords="1531,1248,1703,1285" alt="The Dead Ships"  nohref="nohref" />
-                <area shape="rect" coords="1425,1244,1519,1286" alt="Phase"  nohref="nohref" />
-                <area shape="rect" coords="1163,1248,1415,1286" alt="Amine Edge and Dance"  nohref="nohref" />
+                <area shape="rect" coords="1425,1244,1519,1286" alt="Phases"  nohref="nohref" />
+                <area shape="rect" coords="1163,1248,1415,1286" alt="Amine Edge & DANCE"  nohref="nohref" />
                 <area shape="rect" coords="1091,1206,1188,1245" alt="Algiers"  nohref="nohref" />
                 <area shape="rect" coords="898,1249,1151,1287" alt="Strangers You Know"  nohref="nohref" />
                 <area shape="rect" coords="320,1121,496,1161" alt="RUFUS DU SOL"  nohref="nohref" />
@@ -213,13 +220,13 @@
                 <area shape="rect" coords="189,1412,473,1482" alt="Major Lazer"  nohref="nohref" />
                 <area shape="rect" coords="490,1412,628,1475" alt="Flume"  nohref="nohref" />
                 <area shape="rect" coords="647,1412,947,1476" alt="Beach House"  nohref="nohref" />
-                <area shape="rect" coords="96,1481,449,1528" alt="Edward Sharpe and the Magnetic Zeros"  nohref="nohref" />
-                <area shape="rect" coords="464,1482,640,1526" alt="Matt and Kim"  nohref="nohref" />
+                <area shape="rect" coords="96,1481,449,1528" alt="Edward Sharpe And The Magnetic Zeros"  nohref="nohref" />
+                <area shape="rect" coords="464,1482,640,1526" alt="Matt And Kim"  nohref="nohref" />
                 <area shape="rect" coords="655,1482,893,1526" alt="Chris Stapleton"  nohref="nohref" />
-                <area shape="rect" coords="96,1529,258,1571" alt="Marco Plex"  nohref="nohref" />
+                <area shape="rect" coords="96,1529,258,1571" alt="Maceo Plex"  nohref="nohref" />
                 <area shape="rect" coords="270,1528,372,1574" alt="Baauer"  nohref="nohref" />
                 <area shape="rect" coords="385,1528,489,1570" alt="KSHMR"  nohref="nohref" />
-                <area shape="rect" coords="501,1528,831,1570" alt="Nathaniel Rateliff and the Night Sweats"  nohref="nohref" />
+                <area shape="rect" coords="501,1528,831,1570" alt="Nathaniel Rateliff & The Night Sweats"  nohref="nohref" />
                 <area shape="rect" coords="96,1573,319,1610" alt="Hudson Mohawke"  nohref="nohref" />
                 <area shape="rect" coords="329,1574,575,1612" alt="Kamasi Washington"  nohref="nohref" />
                 <area shape="rect" coords="95,1615,275,1652" alt="John Digweed"  nohref="nohref" />
@@ -243,8 +250,8 @@
                 <area shape="rect" coords="827,1613,971,1656" alt="Deafheaven"  nohref="nohref" />
                 <area shape="rect" coords="1005,1655,1093,1694" alt="Tei Shi"  nohref="nohref" />
                 <area shape="rect" coords="907,1479,1127,1526" alt="The Cold War Kids"  nohref="nohref" />
-                <area shape="rect" coords="846,1528,1189,1575" alt="Adan Beyer and Ida Engberg"  nohref="nohref" />
-                <area shape="rect" coords="911,1575,1077,1611" alt="Tokimonsta"  nohref="nohref" />
+                <area shape="rect" coords="846,1528,1189,1575" alt="Adan Beyer & Ida Engberg"  nohref="nohref" />
+                <area shape="rect" coords="911,1575,1077,1611" alt="TOKiMONSTA"  nohref="nohref" />
                 <area shape="rect" coords="984,1611,1100,1655" alt="Epik High"  nohref="nohref" />
                 <area shape="rect" coords="1101,1656,1252,1695" alt="Meg Myers"  nohref="nohref" />
                 <area shape="rect" coords="1263,1656,1343,1696" alt="Cassy"  nohref="nohref" />
@@ -262,31 +269,79 @@
                 <area shape="rect" coords="1325,1410,1603,1477" alt="Miike Snow"  nohref="nohref" />
             </map>
         </div>
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
+                    <!--<h2 class="section-heading">How It Works</h2>-->
+                    <!--<hr class="light">-->
+                    <!--<p class="text-faded">-Click on an artist to start playing their songs.</p>-->
+                    <!--<p class="text-faded">-Each song automatically starts 30 seconds in. </p>-->
+                    <!--<p class="text-faded">-Select the shuffle button to shuffle through all artists.</p>-->
 
-        <!--<div class="header-content">-->
-            <!--<div class="header-content-inner">-->
-                <!--<h1>Your Favorite Source of Free Bootstrap Themes</h1>-->
-                <!--<hr>-->
-                <!--<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>-->
-                <!--<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>-->
+                <!--</div>-->
             <!--</div>-->
         <!--</div>-->
+    </section>
 
-
-    </header>
-
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">How It Works</h2>
-                    <hr class="light">
-                    <p class="text-faded">-Click on an artist to start playing their songs.</p>
-                    <p class="text-faded">-Each song automatically starts 30 seconds in. </p>
-                    <p class="text-faded">-Select the shuffle button to shuffle through all artists.</p>
-
-                </div>
-            </div>
+    <section id="dolab-section">
+        <div class="poster">
+            <img src="img/dolablarge.jpg" width="100%" border="0" usemap="#dolabmap" id="dolab-poster" />
+            <map name="dolabmap" class="image-map dolab-map">
+                <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+                <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+                <!-- #$-:Please do not edit lines starting with "#$" -->
+                <!-- #$VERSION:2.3 -->
+                <!-- #$AUTHOR:Cameron Loughman -->
+                <area shape="rect" coords="165,181,396,221" alt="Active Sun" nohref="nohref" />
+                <area shape="rect" coords="412,182,603,221" alt="Ardalan Music"  nohref="nohref" />
+                <area shape="rect" coords="622,182,830,221" alt="Autograf"  nohref="nohref" />
+                <area shape="rect" coords="123,223,298,263" alt="Bedouin"  nohref="nohref" />
+                <area shape="rect" coords="316,222,493,264" alt="Big Wild"  nohref="nohref" />
+                <area shape="rect" coords="512,221,644,264" alt="Brillz"  nohref="nohref" />
+                <area shape="rect" coords="661,222,875,263" alt="Cut Snake"  nohref="nohref" />
+                <area shape="rect" coords="137,265,343,307" alt="Dena Amy"  nohref="nohref" />
+                <area shape="rect" coords="361,265,726,307" alt="Dreamers Delight"  nohref="nohref" />
+                <area shape="rect" coords="746,264,863,307" alt="Ekali"  nohref="nohref" />
+                <area shape="rect" coords="592,308,771,350" alt="Ghastly"  nohref="nohref" />
+                <area shape="rect" coords="459,309,573,350" alt="FDVM"  nohref="nohref" />
+                <area shape="rect" coords="230,308,441,351" alt="Everyman Music"  nohref="nohref" />
+                <area shape="rect" coords="101,354,398,393" alt="Gilligan Moss"  nohref="nohref" />
+                <area shape="rect" coords="415,354,708,393" alt="Hotel Garuda"  nohref="nohref" />
+                <area shape="rect" coords="726,353,898,393" alt="Humans Music"  nohref="nohref" />
+                <area shape="rect" coords="99,394,411,435" alt="Hunter Leggitt"  nohref="nohref" />
+                <area shape="rect" coords="431,395,900,435" alt="Imagined Herbal Flows"  nohref="nohref" />
+                <area shape="rect" coords="149,438,324,479" alt="Jaykode"  nohref="nohref" />
+                <area shape="rect" coords="345,437,566,479" alt="Jerry Folk"  nohref="nohref" />
+                <area shape="rect" coords="586,437,855,479" alt="Jesse Wright"  nohref="nohref" />
+                <area shape="rect" coords="143,482,346,521" alt="Job Jobse"  nohref="nohref" />
+                <area shape="rect" coords="364,481,528,521" alt="Kraddy"  nohref="nohref" />
+                <area shape="rect" coords="546,481,655,521" alt="KRNE"  nohref="nohref" />
+                <area shape="rect" coords="670,481,858,520" alt="Le Youth"  nohref="nohref" />
+                <area shape="rect" coords="131,523,297,564" alt="Lee Foss"  nohref="nohref" />
+                <area shape="rect" coords="315,523,449,563" alt="Melvv"  nohref="nohref" />
+                <area shape="rect" coords="468,522,869,564" alt="Mountain Of Youth"  nohref="nohref" />
+                <area shape="rect" coords="181,566,486,606" alt="Nico Luminous"  nohref="nohref" />
+                <area shape="rect" coords="506,564,569,606" alt="NU"  nohref="nohref" />
+                <area shape="rect" coords="589,564,823,606" alt="Oona Dahl"  nohref="nohref" />
+                <area shape="rect" coords="127,610,345,648" alt="Pantyraid"  nohref="nohref" />
+                <area shape="rect" coords="365,608,675,649" alt="Paper Diamond Music"  nohref="nohref" />
+                <area shape="rect" coords="696,607,872,649" alt="Patricio"  nohref="nohref" />
+                <area shape="rect" coords="186,651,496,693" alt="Sacha Robotti"  nohref="nohref" />
+                <area shape="rect" coords="514,650,812,693" alt="Sam Gellaitry"  nohref="nohref" />
+                <area shape="rect" coords="234,695,429,737" alt="San Holo"  nohref="nohref" />
+                <area shape="rect" coords="451,695,589,737" alt="Satori"  nohref="nohref" />
+                <area shape="rect" coords="609,694,768,737" alt="Shawni"  nohref="nohref" />
+                <area shape="rect" coords="90,738,514,779" alt="Speaker Of The House Music"  nohref="nohref" />
+                <area shape="rect" coords="534,738,912,779" alt="Stanton Warriors"  nohref="nohref" />
+                <area shape="rect" coords="132,780,248,821" alt="STWO"  nohref="nohref" />
+                <area shape="rect" coords="268,780,557,821" alt="Stylust Beats"  nohref="nohref" />
+                <area shape="rect" coords="577,780,869,821" alt="Sweater Beats"  nohref="nohref" />
+                <area shape="rect" coords="194,824,429,864" alt="The Drifter Dj"  nohref="nohref" />
+                <area shape="rect" coords="446,823,806,865" alt="The Funk Hunters"  nohref="nohref" />
+                <area shape="rect" coords="101,866,557,907" alt="The Human Experience Music"  nohref="nohref" />
+                <area shape="rect" coords="571,866,897,907" alt="Walker &amp; Royce"  nohref="nohref" />
+                <area shape="rect" coords="381,908,621,950" alt="Wave Racer"  nohref="nohref" />
+            </map>
         </div>
     </section>
 
@@ -296,15 +351,15 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Questions or Comments?</h2>
                     <hr class="primary">
-                    <p>Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Send us an email and we will get back to you as soon as possible!</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <!--<p>123-456-6789</p>-->
-                </div>
-                <div class="col-lg-4 text-center">
+                <!--<div class="col-lg-4 col-lg-offset-2 text-center">-->
+                    <!--<i class="fa fa-phone fa-3x wow bounceIn"></i>-->
+                    <!--&lt;!&ndash;<p>123-456-6789</p>&ndash;&gt;-->
+                <!--</div>-->
+                <div class="col-lg-8 col-lg-offset-2 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <!--<p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>-->
+                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
                 </div>
             </div>
         </div>
@@ -319,7 +374,7 @@
                     <span class="glyphicon glyphicon-play" id="play-button"></span>
                     <span class="glyphicon glyphicon-pause hidden" id="pause-button"></span>
                     <span class="glyphicon glyphicon-step-forward" id="next-button"></span>
-                    <span class="glyphicon glyphicon-random" id="shuffle-button"></span>
+                    <span class="glyphicon glyphicon-random" data-container="body" data-toggle="tooltip" data-placement="top" title="Tooltip on top" id="shuffle-button"></span>
                 </div>
 
                 <div class="song-info-container">
@@ -331,7 +386,25 @@
     </div>
 
 
+<div id="infomodal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="infoModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Built to help you discover artists and songs</h3>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>Select an artist from the lineup to start playing their tracks.</li>
+                    <li>Check back soon for more festival lineups.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Got It!</button>
+            </div>
+        </div>
 
+    </div>
+</div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -343,17 +416,22 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/mapify.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+
 
     <!-- My Javascript -->
     <script src="myjs/auth.js"></script>
     <script src="myjs/imageMapResizer.min.js"></script>
+    <script src="js/jQuery-maphilight.js"></script>
+    <script src="js/map_rollover.js"></script>
     <script src="myjs/search.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
     <script src="js/jquery.imagemapster.js"></script>
 
 
     <script type="text/javascript">
-        imageMapResize();
+
+        $('map').imageMapResize();
         $(document).ready(function(){
             $('.show-video-button').click(function(){
                 setTimeout(function(){
@@ -362,14 +440,17 @@
                 }, 300);
             });
 
-            $('area').hover(function(){
-                $(this).addClass('border-thick')
-            })
-
             $('.hide-video-button').click(function(){
                 $('.show-video-button').toggleClass('hidden');
                 $('.hide-video-button').toggleClass('hidden');
             });
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('#aboutButton').click(function(){
+                $('#infomodal').modal('show');
+            })
+
 
         })
 

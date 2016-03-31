@@ -35,6 +35,10 @@ a {
     transition: all .35s;
 }
 
+.nav-button{
+    cursor:pointer;
+}
+
 a:hover,
 a:focus {
     color: #eb3812;
@@ -69,7 +73,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    /*padding: 100px 0;*/
 }
 
 aside {
@@ -183,12 +187,12 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    /*background-image: url(../img/header.jpg);*/
-    /*background-position: center;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*background-size: cover;*/
-    /*-o-background-size: cover;*/
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 header .header-content {
@@ -214,6 +218,17 @@ header .header-content .header-content-inner p {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,.7);
+}
+
+header .header-content .header-content-inner .btn{
+    width:210px;
+}
+
+header .header-content .header-content-inner .btn.dolab {
+    background:#1798E4;
+}
+header .header-content .header-content-inner .btn.coachella {
+    background:#F0773E
 }
 
 @media(min-width:768px) {
@@ -514,12 +529,20 @@ body {
 
 
 .show-video-button{
-    top: 10px;
+    top: -35px;
+}
+
+.show-video-button.visible{
+    top:10px;
 }
 
 .hide-video-button{
     top:-34px;
     opacity: 0.7;
+}
+
+.tooltip{
+    /*position:fixed !important;*/
 }
 
 
@@ -571,17 +594,9 @@ pulse
     }
 }
 
-.border-thick{
-    outline:solid #ff0000
+.modal-body{
+    font-size:18px;
 }
-.mapify-hover{
-    fill:rgba(0,0,0,0.15);
-    stroke: #fff;
-    stroke-width: 2;
-}
-
-.custom-hover{
-    fill:rgba(0,0,0,0.15);
-    stroke: #fff;
-    stroke-width: 2;
+section#contact{
+    padding:100px 0;
 }

@@ -6,7 +6,7 @@
 .player-controls-bar {
     background: #3c3c3c;
     position: fixed;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     z-index: 200;
     width: 100%;
@@ -16,6 +16,13 @@
     -ms-user-select: none;
     -os-user-select: none;
     user-select: none;
+    -webkit-transition: bottom 2s; /* Safari */
+    transition: bottom 1s;
+}
+
+.player-controls-bar.visible{
+
+    bottom:0 !important;
 }
 
 .background-blur-container {
@@ -72,9 +79,13 @@
     opacity:1;
 }
 
-#shuffle-button.active{
+#shuffle-button.active.coachella{
      color: #f05f40;;
  }
+
+#shuffle-button.active.dolab{
+    color: #1798E4;
+}
 
 .controls .glyphicon.hidden{
     display:none;
