@@ -6,7 +6,6 @@ jQuery(document).ready(function($){
         strokeWidth:1,
         fillColor:'ffffff'
     });
-	//$('img[usemap]').rwdImageMaps();
 });
 
 
