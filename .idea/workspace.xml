@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1796d75d-ce10-4a93-b528-2b5d7037e874" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myjs/search.js" afterPath="$PROJECT_DIR$/myjs/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="camlough.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myjs/search.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
-              <caret line="170" column="24" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+              <caret line="179" column="1" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -106,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="445" column="1" selection-start-line="445" selection-start-column="1" selection-end-line="448" selection-end-column="24" />
+            <state relative-caret-position="59">
+              <caret line="439" column="12" selection-start-line="439" selection-start-column="12" selection-end-line="439" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/css/control-bar.css" />
         <option value="$PROJECT_DIR$/css/creative.css" />
         <option value="$PROJECT_DIR$/js/map_rollover.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/myjs/search.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -323,12 +323,12 @@
       <option name="presentableId" value="Default" />
       <updated>1458940412076</updated>
       <workItem from="1458940413345" duration="171000" />
-      <workItem from="1459188888607" duration="38821000" />
+      <workItem from="1459188888607" duration="39177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38992000" />
+    <option name="totallyTimeSpent" value="39348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -438,18 +438,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/myjs/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="445" column="1" selection-start-line="445" selection-start-column="1" selection-end-line="448" selection-end-column="24" />
+        <state relative-caret-position="188">
+          <caret line="179" column="1" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myjs/search.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="170" column="24" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
+        <state relative-caret-position="59">
+          <caret line="439" column="12" selection-start-line="439" selection-start-column="12" selection-end-line="439" selection-end-column="12" />
           <folding />
         </state>
       </provider>
