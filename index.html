@@ -441,6 +441,8 @@
             $('map').imageMapResize();
             setTimeout(function(){
                 $(window).trigger('resize');
+                $('.coachella-map').addClass('hidden');
+                $('.coachella-map').removeClass('hidden');
             },1000);
 
             $('.show-video-button').click(function(){
@@ -454,6 +456,8 @@
                 $('.show-video-button').toggleClass('hidden');
                 $('.hide-video-button').toggleClass('hidden');
             });
+
+            $('#infomodal').modal('show');
 
             $('[data-toggle="tooltip"]').tooltip();
 
