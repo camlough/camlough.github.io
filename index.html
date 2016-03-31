@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festival Ear</title>
+    <title>LineupLatch</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">festival ear</a>
+                <a class="navbar-brand page-scroll" href="#page-top">lineup latch</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -436,38 +436,38 @@
 
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function() {
 
             $('map').imageMapResize();
-            setTimeout(function(){
+            setTimeout(function () {
                 $(window).trigger('resize');
                 $('.coachella-map').addClass('hidden');
                 $('.coachella-map').removeClass('hidden');
-            },1000);
+            }, 1000);
 
-            $('.show-video-button').click(function(){
-                setTimeout(function(){
+            $('.show-video-button').click(function () {
+                setTimeout(function () {
                     $('.hide-video-button').toggleClass('hidden');
                     $('.show-video-button').toggleClass('hidden');
                 }, 300);
             });
 
-            $('.hide-video-button').click(function(){
+            $('.hide-video-button').click(function () {
                 $('.show-video-button').toggleClass('hidden');
                 $('.hide-video-button').toggleClass('hidden');
             });
 
-            $('#infomodal').modal('show');
-
             $('[data-toggle="tooltip"]').tooltip();
 
-            $('#aboutButton').click(function(){
+            $('#aboutButton').click(function () {
                 $('#infomodal').modal('show');
             })
 
-
+            if ($.cookie('reload') == null) {
+                location.reload();
+                $.cookie('reload', 'done', 365);
+            }
         })
-
     </script>
 
 
