@@ -362,7 +362,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Questions or Comments?</h2>
                     <hr class="primary">
-                    <p>Send us an email and we will get back to you as soon as possible!</p>
+                    <p>Send me an email and I will get back to you as soon as possible!</p>
                 </div>
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -392,6 +392,15 @@
             </div>
         </div>
     </div>
+
+
+
+
+<div style="display: block; position: relative; padding: 0px; width: 1048px; height: 1397px; background-image: url(&quot;http://lineuplatch.com/img/coachella_poster.jpg&quot;); background-size: contain;"><canvas style="width: 1048px; height: 1397px; position: absolute; left: 0px; top: 0px; padding: 0px; border: 0px;" height="1397" width="1048"></canvas><img id="coachella-poster" src="img/coachella_poster.jpg" width="100%" border="0" usemap="#map" class="maphilighted" style="opacity: 0; position: absolute; left: 0px; top: 0px; padding: 0px; border: 0px;">
+</div>
+
+
+
 
 
 <div id="infomodal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="infoModal">
@@ -428,6 +437,7 @@
 
 
     <!-- My Javascript -->
+
     <script src="myjs/auth.js"></script>
     <script src="myjs/imageMapResizer.min.js"></script>
     <script src="js/jQuery-maphilight.js"></script>
@@ -441,23 +451,28 @@
 
         $(document).ready(function() {
 
-            $('map').imageMapResize();
-            setTimeout(function () {
-                $(window).trigger('resize');
-                $('.coachella-map').addClass('hidden');
-                $('.coachella-map').removeClass('hidden');
-            }, 1000);
+            imageMapResize();
+
+            $('.song-info-container').click(function(){
+                if($('.hide-video-button').hasClass('hidden')){
+                    $('.show-video-button').click();
+                }else{
+                    $('.hide-video-button').click();
+                }
+            })
 
             $('.show-video-button').click(function () {
-                setTimeout(function () {
-                    $('.hide-video-button').toggleClass('hidden');
-                    $('.show-video-button').toggleClass('hidden');
-                }, 300);
+                $('.show-video-button').toggleClass('hidden');
+                $('.hide-video-button').toggleClass('hidden');
+
             });
 
             $('.hide-video-button').click(function () {
-                $('.show-video-button').toggleClass('hidden');
                 $('.hide-video-button').toggleClass('hidden');
+                setTimeout(function(){
+                    $('.show-video-button').toggleClass('hidden');
+                },500)
+
             });
 
             $('[data-toggle="tooltip"]').tooltip();
@@ -465,6 +480,12 @@
             $('#aboutButton').click(function () {
                 $('#infomodal').modal('show');
             })
+
+            var h = $(window).height();
+            var w = $(window).width();
+
+            window.resizeTo(w-1, h-1);
+            window.resizeTo(w, h);
 
             if ($.cookie('reload') == null) {
                 location.reload();

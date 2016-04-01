@@ -37,7 +37,7 @@ var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+//firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
@@ -61,7 +61,7 @@ function playSong() {
     }
     player.loadVideoById(resp[songIndex].id.videoId, 30);
 
-    $('.song-info-container').empty().append('<div>'+ resp[songIndex].snippet.title+ '</div>');
+    $('.song-info-container').empty().append('<div class="song-info-text">'+ resp[songIndex].snippet.title+ '</div>');
     $('#play-button').addClass('hidden');
     $('#pause-button').removeClass('hidden');
 }
@@ -151,7 +151,7 @@ function onPlayerReady(event) {
 
 
     var firstScroll = true;
-    var height = $(window).height() - 51;
+    var height = $(window).height() - 80;
     function scrollWatch(ev){
         if(isScrolledIntoView($('#dolab-section'))){
             posterId = 'dolab';
