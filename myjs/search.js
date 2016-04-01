@@ -172,7 +172,7 @@ function onPlayerReady(event) {
                 //     player.playVideo();
                 //     $.cookie('playvideo', 'done', 365);
                 // }
-            },1000);
+            },500);
         };
     }
     window.onscroll=scrollWatch;
