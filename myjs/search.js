@@ -146,7 +146,6 @@ function onPlayerReady(event) {
         $(this).addClass(posterId);
         shuffleOn = !shuffleOn;
         $('[data-toggle="tooltip"]').tooltip('hide');
-        console.log(posterId);
     })
 
 

@@ -548,6 +548,10 @@ body {
     transform: translatex(-50%);
 }
 
+.show-video-button.nopulse{
+    left:50%;
+}
+
 .show-video-button.visible{
     top:10px;
 }
