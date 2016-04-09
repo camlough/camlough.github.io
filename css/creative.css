@@ -222,6 +222,7 @@ header .header-content .header-content-inner p {
 
 header .header-content .header-content-inner .btn{
     width:210px;
+    margin-top:10px;
 }
 
 header .header-content .header-content-inner .btn.dolab {
@@ -229,6 +230,10 @@ header .header-content .header-content-inner .btn.dolab {
 }
 header .header-content .header-content-inner .btn.coachella {
     background:#F0773E
+}
+header .header-content .header-content-inner .btn.heineken {
+    background:#046932;
+    width:300px;
 }
 
 .mobile-fail{

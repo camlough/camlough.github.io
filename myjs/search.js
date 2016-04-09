@@ -154,10 +154,10 @@ function onPlayerReady(event) {
     function scrollWatch(ev){
         if(isScrolledIntoView($('#dolab-section'))){
             posterId = 'dolab';
-        }else{
+        }
+        else{
             posterId = 'coachella';
         }
-        console.log(posterId);
         $('#shuffle-button').attr('data-original-title','shuffle ' + posterId + ' artists');
 
         if(window.pageYOffset>height && firstScroll){
