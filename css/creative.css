@@ -240,14 +240,14 @@ header .header-content .header-content-inner .btn.heineken {
     display:none;
 }
 
-@media(max-width:766px){
-    .mobile-fail{
-        display:block;
-    }
-    .desktop-only{
-        display:none;
-    }
-}
+/*@media(max-width:766px){*/
+    /*.mobile-fail{*/
+        /*display:block;*/
+    /*}*/
+    /*.desktop-only{*/
+        /*display:none;*/
+    /*}*/
+/*}*/
 
 @media(min-width:768px) {
     header {
